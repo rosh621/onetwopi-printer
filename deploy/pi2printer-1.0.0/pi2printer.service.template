@@ -1,0 +1,17 @@
+[Unit]
+Description=Pi2Printer Email Monitor
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/pi2printer
+Environment=PATH=/home/pi/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/python3 email_monitor.py --interval 10
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
