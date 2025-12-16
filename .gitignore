@@ -3,6 +3,7 @@
 credentials.json
 token.json
 
+
 # Runtime data and logs
 printed_missions.txt
 *.log
@@ -22,3 +23,7 @@ __pycache__/
 *.bak
 *.backup
 *~
+
+# Misc
+README.md
+
